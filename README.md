@@ -1,1 +1,1 @@
-# prog_itmo
+# Programming in Itmo
