@@ -1,0 +1,26 @@
+(defn common [f] #(mapv f %1 %2))
+(def v+ (common +))
+(def v- (common -))
+(def v* (common *))
+(def vd (common /))
+
+(def m+ (common v+))
+(def m* (common v*))
+(def m- (common v-))
+(def md (common vd))
+
+(defn scalar [first, second] (apply + (mapv v* first second)))
+(defn vect [first, second] (vector (- (* (first 2) (second 3)) (* (first 3) (second 2)))
+                                   (- (* (first 3) (second 1)) (* (first 1) (second 3)))
+                                   (- (* (first 1) (second 2)) (* (first 2) (second 1)))))
+(defn v*s [first, second] (mapv (fn [n] (* second n)) first))
+
+(defn transpose [a] (apply mapv vector a))
+(defn m*s [first, second] (mapv (fn [n] (v*s second n)) first))
+(defn m*v [first, second] (mapv (fn [n] (scalar second n)) first))
+(defn m*m [first, second] (mapv (fn [n] (mapv (fn [m] (scalar n m)) (transpose second))) first))
+
+(def c+ (common m+))
+(def c- (common m-))
+(def c* (common m*))
+(def cd (common md))
