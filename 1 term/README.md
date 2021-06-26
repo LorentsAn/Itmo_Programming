@@ -130,7 +130,7 @@ new Multiply(new Const(2), new Variable("x"))
 | To be, or not to be, that is the question: | to 2 1 5 be 2 2 6 or 1 3 not 1 4 that 1 7 is 1 8 the 1 9 question 1 10 | 
 | Monday's child is fair of face. Tuesday's child is full of grace. |     monday's 1 1 child 2 2 8 is 2 3 9 fair 1 4 of 2 5 11 face 1 6 tuesday's 1 7 full 1 10 grace 1 12 |
 |  Шалтай-Болтай сидел на стене. Шалтай-Болтай свалился во сне. |     шалтай-болтай 2 1 5 сидел 1 2 на 1 3 стене 1 4 свалился 1 6 во 1 7 сне 1 8 |
-| :---: | :---: |
+
     
 ## Домашнее задание 5. Свой сканер
 Реализуйте свой аналог класса Scanner на основе Reader.  
